@@ -1,4 +1,4 @@
-@section('title', 'Home')
+@section('title', '')
 <x-layout>
   <h1>Sample App</h1>
   <p>

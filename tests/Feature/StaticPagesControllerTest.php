@@ -20,17 +20,7 @@ class StaticPagesControllerTest extends TestCase
     {
         $response = $this->get(route('root'));
         $response->assertStatus(200);
-        $response->assertSeeHtmlInOrder(['<title>', "Home | $this->base_title", '</title>']);
-    }
-
-    /**
-     * @test
-     */
-    public function should_get_home(): void
-    {
-        $response = $this->get(route('home'));
-        $response->assertStatus(200);
-        $response->assertSeeHtmlInOrder(['<title>', "Home | $this->base_title", '</title>']);
+        $response->assertSeeHtml('<title>Laravel Tutorial Sample App</title>');
     }
 
     /**

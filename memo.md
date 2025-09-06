@@ -62,3 +62,19 @@ protected function setUp(): void
 
 - formatterはPintというものがデフォルトでインストールされる[LaravelのFormatter(Pint)の導入](https://qiita.com/aosan/items/333d048f412bc293dc53)
 - blade のフォーマッタはよくわかってないので[Laravel Blade formatter](https://marketplace.visualstudio.com/items?itemName=shufo.vscode-blade-formatter)というアドオンを使用する
+
+## ch4
+- ヘルパー関数の作り方には色々あるが、今回は`app/Helpers/Helper.php`内の`Helper`クラスを作成し、そのstaticメソッドとして実装した。本来はロジック部分の汎用的なヘルパー関数を追加する場所かも
+- 他にも色々ある
+    - [View Composers](https://laravel.com/docs/12.x/views#view-composers) : viewがレンダリングされる際に呼び出される。view用のロジックはここで定義するのがlaravelっぽい？
+    - [Raw PHP](https://laravel.com/docs/12.x/blade#raw-php): メソッドとして定義しなくても、bladeは関数を直接インポートできる
+
+- PHPコード内から`@yield`を呼び出せないので、`Illuminate\Support\Facades\View::getSection`でセクションを読み込む
+
+```php
+// これだとエラーが発生する
+<title>{{ Helper::fullTitleHelper(@yield('title')) }}</title>
+
+// これは問題ない
+<title>{{ Helper::fullTitleHelper(View::getSection('title')) }}</title>
+```

@@ -1,0 +1,11 @@
+@section('title', 'Home')
+<x-layout>
+  <h1>Sample App</h1>
+  <p>
+    This is the home page for the
+    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    sample application.
+  </p>
+  <div class="text-red-500">大きい</div>
+  <div class="text-lg">大きい</div>
+</x-layout>

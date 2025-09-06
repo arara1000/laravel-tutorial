@@ -57,6 +57,9 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
+        ],
+        "fmt": [
+            "./vendor/bin/pint -v"
         ]
     },
     "extra": {

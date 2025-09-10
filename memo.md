@@ -78,3 +78,8 @@ protected function setUp(): void
 // これは問題ない
 <title>{{ Helper::fullTitleHelper(View::getSection('title')) }}</title>
 ```
+
+## デプロイ
+- 公式を参考にデプロイする
+- imageは古めだがちゃんと成功した
+https://render.com/docs/deploy-php-laravel-docker

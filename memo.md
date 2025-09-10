@@ -81,5 +81,6 @@ protected function setUp(): void
 
 ## デプロイ
 - 公式を参考にデプロイする
-- imageは古めだがちゃんと成功した
-https://render.com/docs/deploy-php-laravel-docker
+- https://render.com/docs/deploy-php-laravel-docker
+- ~~imageは古めだがちゃんと成功した~~
+- `vite build` でフロント用のファイルをビルドする必要がある。

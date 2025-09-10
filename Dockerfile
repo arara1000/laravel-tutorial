@@ -1,6 +1,25 @@
+FROM node:20-slim AS build-vite 
+
+# よくわからないがpnpmが叩けるようになる
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml vite.config.js ./
+
+RUN pnpm install
+
+COPY . .
+
+RUN pnpm run build
+
 FROM richarvey/nginx-php-fpm:3.1.6
 
 COPY . .
+
+COPY --from=build-vite /app/public/build /public/build
 
 # Image config
 ENV SKIP_COMPOSER=1

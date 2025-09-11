@@ -80,7 +80,12 @@ protected function setUp(): void
 ```
 
 ## デプロイ
-- 公式を参考にデプロイする
+- ~~公式を参考にデプロイする~~
 - https://render.com/docs/deploy-php-laravel-docker
 - ~~imageは古めだがちゃんと成功した~~
-- `vite build` でフロント用のファイルをビルドする必要がある。
+- ~~`vite build` でフロント用のファイルをビルドする必要がある。~~
+- 失敗し続けるので一旦デプロイはなし
+- ローカルでも *500 Server Error* が出たり出なかったりして今の知識では原因がわからない。
+- `docker compose up --build` 後にコンテナを落として再度 `docker compose up` すると *500 Server Error* になったりならなかったりする。
+- render.com側はずっと Server Error 
+- log [Render.com側](./memolog/failed_deploy_from_render.log.text), [local側](./memolog/failed_compose_up.text)

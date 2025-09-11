@@ -1,4 +1,4 @@
-FROM node:20-slim AS build-vite 
+FROM node:24-alpine AS build-vite 
 
 # よくわからないがpnpmが叩けるようになる
 ENV PNPM_HOME="/pnpm"

@@ -1,0 +1,98 @@
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "DoiaW8yMk9pUzZYTElQZE5TUWJma2ZJNW5EdEU4b29jQmxyUlBXVXJLZSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, \"last_activity\" = 1757551094, \"user_id\" = ?, \"ip_address\" = 172.18.0.1, \"user_agent\" = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, \"id\" = nnrEX4SSEjpahLa2ZsdFkuS3rpqOlA5tSAVclj0E where \"id\" = nnrEX4SSEjpahLa2ZsdFkuS3rpqOlA5tSAVclj0E) at /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php:824)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "[stacktrace]"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#0 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(778): Illuminate\\Database\\Connection->runQueryCallback('update \"session...', Array, Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#1 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(583): Illuminate\\Database\\Connection->run('update \"session...', Array, Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(535): Illuminate\\Database\\Connection->affectingStatement('update \"session...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3917): Illuminate\\Database\\Connection->update('update \"session...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(172): Illuminate\\Database\\Query\\Builder->update(Object(Illuminate\\Support\\Collection))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(159): Illuminate\\Session\\DatabaseSessionHandler->performUpdate('nnrEX4SSEjpahLa...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(141): Illuminate\\Session\\DatabaseSessionHandler->performInsert('nnrEX4SSEjpahLa...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Store.php(175): Illuminate\\Session\\DatabaseSessionHandler->write('nnrEX4SSEjpahLa...', 'a:3:{s:6:\"_toke...')"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(244): Illuminate\\Session\\Store->save()"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(129): Illuminate\\Session\\Middleware\\StartSession->saveSession(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(764): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(753): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#21 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#22 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))"
+
+
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 8 attempt to write a readonly database at /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php:595)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "[stacktrace]"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#0 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(595): PDOStatement->execute()"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#1 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(811): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('update \"session...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(778): Illuminate\\Database\\Connection->runQueryCallback('update \"session...', Array, Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(583): Illuminate\\Database\\Connection->run('update \"session...', Array, Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Connection.php(535): Illuminate\\Database\\Connection->affectingStatement('update \"session...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3917): Illuminate\\Database\\Connection->update('update \"session...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(172): Illuminate\\Database\\Query\\Builder->update(Object(Illuminate\\Support\\Collection))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(159): Illuminate\\Session\\DatabaseSessionHandler->performUpdate('nnrEX4SSEjpahLa...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/DatabaseSessionHandler.php(141): Illuminate\\Session\\DatabaseSessionHandler->performInsert('nnrEX4SSEjpahLa...', Array)"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Store.php(175): Illuminate\\Session\\DatabaseSessionHandler->write('nnrEX4SSEjpahLa...', 'a:3:{s:6:\"_toke...')"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#10 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(244): Illuminate\\Session\\Store->save()"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#11 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(129): Illuminate\\Session\\Middleware\\StartSession->saveSession(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(63): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#15 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#16 /var/www/html/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(74): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#17 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(219): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#18 /var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#19 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(821): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))"
+
+[11-Sep-2025 00:38:14] WARNING: [pool www] child 258 said into stderr: "#20 /var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php(800): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))"
+

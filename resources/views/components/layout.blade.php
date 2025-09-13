@@ -13,7 +13,11 @@
 </head>
 
 <body>
-  {{ $slot }}
+  @include('sub.header')
+  <div class="max-w-4xl mx-auto mt-10">
+    {{ $slot }}
+    @include('sub.footer')
+  </div>
 </body>
 
 </html>

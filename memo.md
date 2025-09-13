@@ -89,3 +89,38 @@ protected function setUp(): void
 - `docker compose up --build` 後にコンテナを落として再度 `docker compose up` すると *500 Server Error* になったりならなかったりする。
 - render.com側はずっと Server Error 
 - log [Render.com側](./memolog/failed_deploy_from_render.log.text), [local側](./memolog/failed_compose_up.text)
+
+## ch5 レイアウトを作成する
+
+- styling は `tailwind.css`を利用する（デフォルトでインストールされていたため）
+- そんなに気合は入れずにそれっぽい感じのスタイルで妥協する
+- railsのパーシャルのような機能として[サブビュー](https://laravel.com/docs/12.x/blade#including-subviews)と[blade コンポーネント](https://laravel.com/docs/12.x/blade#components) があるが、簡単のために今回はサブビューを採用
+
+>@include ディレクティブを自由に使用することは可能ですが、Blade コンポーネントを使用すると同様またはそれ以上の機能を利用でき、データバインディングや属性バインディングといった追加の利点が得られます。
+
+- DOMに対するアサーションは素のlaravelとPHPUnitだと再現できなさそう
+
+```ruby:rails
+  test "layout links" do
+    get root_path
+    assert_template 'static_pages/home'
+    assert_select "a[href=?]", root_path, count: 2
+    assert_select "a[href=?]", help_path
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", contact_path
+  end
+```
+
+```php:laravel
+    public function layout_links(): void
+    {
+        $response = $this->get(route('root'));
+        $response->assertViewIs('static_pages.home');
+        $response->assertSeeHtml('href="' . route('root'));
+        $response->assertSeeHtml('href="' . route('help'));
+        $response->assertSeeHtml('href="' . route('about'));
+        $response->assertSeeHtml('href="' . route('contact'));
+    }
+```
+
+- 

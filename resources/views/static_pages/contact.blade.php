@@ -3,6 +3,6 @@
   <h1>Contact</h1>
   <p>
     Contact the Ruby on Rails Tutorial about the sample app at the
-    <a href="#">contact page</a>.
+    <a href="https://railstutorial.jp/contact">contact page</a>.
   </p>
 </x-layout>
